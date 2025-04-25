@@ -7,18 +7,22 @@ const computer_select = document.querySelector('#computer_select');
 const result = document.querySelector('#result');
 const scoreElement = document.querySelector('#score');
 
-const rulesBtn = document.querySelector('#rules');
+// modal buttons
+const openBtn = document.querySelector('#rules');
 const closeBtn = document.querySelector('#close-modal');
 const modal = document.querySelector('#modal');
 
+openBtn.addEventListener('click', toggleModal);
+closeBtn.addEventListener('click', toggleModal);
 
-rulesBtn.addEventListener('click', () => {
-    modal.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-});
+function toggleModal(){
+    console.log("Modal status - " + modal.style.display);
+    if(modal.style.display === 'none' || modal.style.display === ''){
+        modal.style.display = 'flex';
+    } else {
+        modal.style.display = 'none';
+    }
+}
 
 const choices = ['paper', 'rock', 'scissors'];
 let score = 0;
@@ -54,12 +58,14 @@ function checkWinner(userChoice, computerChoice){
 
     if(userChoice === computerChoice){
         result.innerText = "draw";
-    }else if(userChoice === 'paper' && computerChoice === 'rock' ||
-            userChoice === 'rock'  && computerChoice === 'scissors' ||
-            userChoice === 'scissors'  && computerChoice === 'paper'){
+    } else if(
+        userChoice === 'paper' && computerChoice === 'rock' ||
+        userChoice === 'rock'  && computerChoice === 'scissors' ||
+        userChoice === 'scissors'  && computerChoice === 'paper'
+    ){
         result.innerText = "win";
         updateScore(1);
-    }else{
+    } else {
         result.innerText = "lost";
         updateScore(-1);
     }
@@ -74,10 +80,7 @@ function updateScore(value){
 }
 
 function updateSelection(selectionElement, choice){
-    selectionElement.classList.remove('btn-paper');
-    selectionElement.classList.remove('btn-rock');
-    selectionElement.classList.remove('btn-scissors');
-
+    selectionElement.classList.remove('btn-paper', 'btn-rock', 'btn-scissors');
     selectionElement.classList.add(`btn-${choice}`);
 
     const img = selectionElement.querySelector('img');

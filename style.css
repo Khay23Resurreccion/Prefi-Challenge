@@ -14,11 +14,11 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     width: 100vw;
     height: 94vh;
-    max-width: 100%;
-    min-height: 100%;
+    max-width:100%;
+    min-height:100%;
 }
 
-.container {
+.container{
     width: 600px;
     max-width: 100%;
     margin: 0 auto;
@@ -34,7 +34,7 @@ header {
     align-items: center;
 }
 
-header h1 {
+header h1{
     font-size: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -48,21 +48,21 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header .score-container {
+header .score-container{
     background-color: #fff;
     padding: 20px 40px;
     text-align: center;
     border-radius: 15px;
 }
 
-.score-container h4 {
+.score-container h4{
     color: hsl(229, 64%, 46%);
     margin: 0;
     letter-spacing: 4px;
     text-transform: uppercase;
 }
 
-.score-container p {
+.score-container p{
     color: hsl(229, 25%, 31%);
     font-size: 3.5rem;
     font-weight: 700;
@@ -81,7 +81,7 @@ main {
     position: relative;
 }
 
-main::before {
+main::before{
     background-image: url('./images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,24 +101,17 @@ main::before {
     width: 150px;
     margin: 0px 25px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-circle:focus {
     outline: none;
 }
 
-.btn-circle:active {
+.btn-circle:active{
     transform: scale(0.9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn-circle:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn-circle .wrapper {
+.btn-circle .wrapper{
     background-color: #fff;
     border-radius: 50%;
     width: 120px;
@@ -163,21 +156,14 @@ main::before {
     padding: 10px 20px;
     cursor: pointer;
     text-transform: uppercase;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #reset:focus {
     outline: none;
 }
 
-#reset:active {
+#reset:active{
     transform: scale(0.9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#reset:hover {
-    transform: scale(1.05);
-    background-color: hsl(228, 45%, 54%);
 }
 
 .selection {
@@ -195,8 +181,7 @@ main::before {
     margin: 40px;
 }
 
-.user-selection,
-.computer-selection {
+.user-selection, .computer-selection {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -225,7 +210,6 @@ main::before {
     right: 25px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rules-container {
@@ -240,16 +224,8 @@ main::before {
     width: 100%;
     height: 100%;
     z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
-
-.rules-container.active {
-    opacity: 1;
-    visibility: visible;
-}
-
+    
 .rules-container button {
     border: none;
     background-color: transparent;
@@ -258,60 +234,46 @@ main::before {
     cursor: pointer;
 }
 
-@media (max-width: 343px) {
-    .btn-circle {
+@media (max-width: 343px){    
+    .btn-circle {       
         height: 100px;
-        width: 100px;
-    }
-
-    .btn-circle .wrapper {
+        width: 100px;        
+    }   
+    
+    .btn-circle .wrapper{       
         width: 80px;
-        height: 80px;
+        height: 80px;        
     }
 }
 
-@media (max-width: 418px) {
-    .btn-circle {
+@media (max-width: 418px){    
+    .btn-circle {       
         height: 120px;
-        width: 120px;
-    }
-
-    .btn-circle .wrapper {
+        width: 120px;        
+    }   
+    
+    .btn-circle .wrapper{       
         width: 100px;
-        height: 100px;
+        height: 100px;        
     }
 }
 
-@media (max-width: 500px) {
-    header {
-        margin: 20px;
+@media (max-width: 500px){
+    header {       
+        margin: 20px;       
     }
 
-    header h1 {
-        font-size: 2rem;
+    header h1{
+        font-size: 2rem;        
         line-height: 0.9;
     }
 
-    header .score-container {
-        background-color: #fff;
-        padding: 20px 20px;
+    header .score-container{
         padding: 20px 40px;
-        text-align: center;
-        border-radius: 15px;
     }
 
-    .score-container h4 {
-        color: hsl(229, 64%, 46%);
-        margin: 0;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-    }
-
-    .score-container p {
-        color: hsl(229, 25%, 31%);
+    .score-container p{
         font-size: 3rem;
-        font-weight: 700;
-        margin: 0;
     }
 
     .result-section {
@@ -319,11 +281,11 @@ main::before {
         margin: auto;
     }
 
-    .result-section h1 {
+    .result-section h1{
         margin: 10px;
     }
 
-    .selection {
+    .selection{
         width: 100vw;
         max-width: 100vw;
         flex-wrap: wrap;
@@ -331,12 +293,12 @@ main::before {
         align-items: center;
     }
 
-    .selection h2 {
+    .selection h2 {        
         font-size: 1.1rem;
     }
 
     .selection .btn-circle {
-        margin: 30px;
+        margin: 30px;        
     }
 
     .btn-rules {

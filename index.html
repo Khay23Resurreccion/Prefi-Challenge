@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <title>Rock, Paper, Scissors</title>
-
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
-
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 <body>
 
@@ -39,41 +29,45 @@
     <main id="main">
       <button class="btn-circle btn-paper choice-click" data-choice="paper">
         <span class="wrapper">
-          <img src="images/icon-paper.svg" alt="Paper">
-
-        </span>
+          <img src="./images/icon-paper.svg" alt="paper-icon"/>
+        </span>        
       </button>
 
       <button class="btn-circle btn-scissors choice-click" data-choice="scissors">
         <span class="wrapper">
-          <img src="./images/icon-scissors.svg" alt="scissors-icon" />
-        </span>
+          <img src="./images/icon-scissors.svg" alt="scissors-icon"/>
+        </span>        
       </button>
 
       <button class="btn-circle btn-rock choice-click" data-choice="rock">
         <span class="wrapper">
-          <img src="images/icon-rock.svg" alt="Rock">
-        </span>
+          <img src="./images/icon-rock.svg" alt="rock-icon"/>
+        </span>        
       </button>
-    </main>
-
-    <button class="btn-rules" id="rules">Rules</button>
+    </main>    
+    
+    <button class="btn-rules" id="rules">Rules</button>    
   </div>
 
-  <div class="rules-container" id="modal">
-    <img src="images/image-rules.svg" alt="Rules">
-    <button id="close-modal">
-      <img src="./images/icon-close.svg" alt="close button" />
-    </button>
+  <!-- Modal for Rules -->
+  <div class="rules-container" id="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>RULES</h2>
+      <img src="./images/image-rules.svg" alt="rules" />
+      <button id="close-modal" class="close-btn">
+        <img src="./images/icon-close.svg" alt="close button"/>
+      </button>
+    </div>
   </div>
 
+  <!-- Selection Screen -->
   <div class="selection" id="selection">
     <div class="user-selection">
       <h2>You picked</h2>
       <button class="btn-circle btn-paper" id="user_select">
         <span class="wrapper">
-          <img src="./images/icon-paper.svg" alt="paper-icon" />
-        </span>
+          <img src="./images/icon-paper.svg" alt="paper-icon"/>
+        </span>          
       </button>
     </div>
 
@@ -86,12 +80,11 @@
       <h2>The House picked</h2>
       <button class="btn-circle btn-paper" id="computer_select">
         <span class="wrapper">
-          <img src="./images/icon-paper.svg" alt="paper-icon" />
+          <img src="./images/icon-paper.svg" alt="paper-icon"/>
         </span>
       </button>
     </div>
   </div>
-
 
 </body>
 </html>
