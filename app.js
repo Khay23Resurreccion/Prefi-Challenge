@@ -11,6 +11,7 @@ const rulesBtn = document.querySelector('#rules');
 const closeBtn = document.querySelector('#close-modal');
 const modal = document.querySelector('#modal');
 
+
 rulesBtn.addEventListener('click', () => {
     modal.classList.add('active');
 });

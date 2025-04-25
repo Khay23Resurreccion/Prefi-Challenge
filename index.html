@@ -19,45 +19,6 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
-
-    .btn-circle {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .btn-circle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-rules,
-    #reset {
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .btn-rules:hover,
-    #reset:hover {
-      transform: scale(1.05);
-      background-color: hsl(228, 45%, 54%);
-    }
-
-    .rules-container {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.4s ease;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 10;
-    }
-
-    .rules-container.active {
-      opacity: 1;
-      visibility: visible;
-    }
   </style>
 </head>
 <body>
@@ -79,6 +40,7 @@
       <button class="btn-circle btn-paper choice-click" data-choice="paper">
         <span class="wrapper">
           <img src="images/icon-paper.svg" alt="Paper">
+
         </span>
       </button>
 
@@ -130,24 +92,6 @@
     </div>
   </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <script>
-    const modal = document.getElementById("modal");
-    const rulesBtn = document.getElementById("rules");
-    const closeBtn = document.getElementById("close-modal");
-
-    rulesBtn.addEventListener("click", () => {
-      modal.classList.add("active");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.classList.remove("active");
-    });
-  </script>
 
 </body>
 </html>
