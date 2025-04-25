@@ -70,7 +70,7 @@ header .score-container{
 }
 
 main {
-    /* background-color: #fff; */
+  
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -330,4 +330,34 @@ main::before{
     }
 
     
+}
+
+
+.btn-circle,
+#reset,
+.btn-rules,
+.rules-container {
+  transition: all 0.3s ease;
+}
+
+.btn-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#reset:hover,
+.btn-rules:hover {
+  transform: scale(1.05);
+  background-color: hsl(228, 45%, 54%);
+}
+
+.rules-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.rules-container.active {
+  opacity: 1;
+  visibility: visible;
 }

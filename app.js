@@ -7,22 +7,17 @@ const computer_select = document.querySelector('#computer_select');
 const result = document.querySelector('#result');
 const scoreElement = document.querySelector('#score');
 
-
-const openBtn = document.querySelector('#rules');
+const rulesBtn = document.querySelector('#rules');
 const closeBtn = document.querySelector('#close-modal');
 const modal = document.querySelector('#modal');
 
-openBtn.addEventListener('click', toggleModal);
-closeBtn.addEventListener('click', toggleModal);
+rulesBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+});
 
-function toggleModal(){
-    console.log("sdfds - "+modal.style.display);
-    if(modal.style.display === 'none' || modal.style.display === ''){
-        modal.style.display = 'flex';
-    }else{
-        modal.style.display = 'none';
-    }
-}
+closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+});
 
 const choices = ['paper', 'rock', 'scissors'];
 let score = 0;
@@ -41,23 +36,18 @@ function playAgain(){
 function userChoiceClickHandler(e){
     const userChoice = this.getAttribute('data-choice');
     playGame(userChoice);
-    
 }
 
 function playGame(userChoice){
     const computerChoice = pickChoiceRandom();
-
     checkWinner(userChoice, computerChoice);
 }
-
 
 function pickChoiceRandom(){
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
 function checkWinner(userChoice, computerChoice){
-
-    
     updateSelection(user_select, userChoice);
     updateSelection(computer_select, computerChoice);
 
@@ -66,19 +56,15 @@ function checkWinner(userChoice, computerChoice){
     }else if(userChoice === 'paper' && computerChoice === 'rock' ||
             userChoice === 'rock'  && computerChoice === 'scissors' ||
             userChoice === 'scissors'  && computerChoice === 'paper'){
-    
         result.innerText = "win";
         updateScore(1);
     }else{
-      
         result.innerText = "lost";
         updateScore(-1);
     }
 
-
     main.style.display = "none";
     selection.style.display = "flex";
-
 }
 
 function updateScore(value){
